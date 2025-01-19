@@ -73,25 +73,30 @@ Read about a handy CLI tool called \textit{fzf} and answer the following questio
 \begin{itemize}
     \item Fuzzy searching finds matches even with small differences or typos in the search term. It helps locate items by showing similar results, even if the search query is incomplete or misspelled.
     \item The command ls | fzf lists the files and directories in the current directory (ls), then passes that list through a pipe (|) to fzf, which performs fuzzy searching.
-        \texttt{ls | fzf}
 \end{itemize}
 
 \subsubsection{Using fzf to find your favorite PDF}
-You might have came across moments when you want to open up a certain PDF when studying for your final exams but finding the directory of that
-PDF is a very gruesome and tiring process. In this section, we will be using \textit{fzf} to find our PDF in seconds! We will be going step by step
-on how to find your file and use fzf to select it.
+1. Finding PDF Files
+To list all files with the .pdf extension, you can use the following command:
+fd -e pdf
+Here, the fd command searches for all files with this extension in the current directory and its subdirectories.
 
-\begin{enumerate}
-    \item We first need to list the directory of all the files with the extension \texttt{.PDF}. Write a command to list the directory of all the files with the extension \texttt{.PDF} \\
-        \textbf{HINT:} use the command \texttt{fd} for this purpose.
-    \item Now we have to select the PDF we want using \textit{fzf}. Write a command to use \textit{fzf} to select a PDF from the data we gathered above.
-\end{enumerate}
+2. Selecting a File Using fzf
+To select a specific PDF file from the list of results, you can use the fzf tool. The following command accomplishes this:
+fd -e pdf | fzf
+At this point, the list of PDF files is passed to fzf, allowing you to navigate through the files using the arrow keys and select the desired file. This method is both efficient and user-friendly
 
 \subsubsection{Opening the file using Zathura}
-Now that have selected which PDF we want to open, we can use a very minimalistic program called \textit{Zathura} to open it. Write a command that uses the
-commands above to open the file using Zathura.
-\paragraph{HINT:} This is how Zathura opens files: \texttt{zathura /path/to/file}
-\paragraph{HINT:} Learn what the syntax \texttt{zathura \$(\textit{command})} does and use to open the PDF we have selected.
+To open the selected PDF using Zathura, we can use the output of the commands mentioned earlier and pass it to Zathura. Here’s how to do it:
+Command:
+zathura $(fd -e pdf | fzf)
+Explanation:
+fd -e pdf: Lists all files with the .pdf extension.
+| fzf: Passes the list of PDF files to fzf, allowing the user to select one file interactively.
+$(command): Executes the command inside the parentheses and substitutes its output. Here, it takes the selected file path from fzf and passes it to zathura.
+zathura $(...): Opens the selected PDF file in Zathura.
+Usage:
+When you run this command, a list of PDF files appears. Use the arrow keys to select the desired file and press Enter. The selected file will open in Zathura.
 
 \section{Git and FOSS}
 \subsection{README.md}
