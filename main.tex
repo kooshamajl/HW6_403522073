@@ -48,16 +48,21 @@ First, we create the main.yml file, commit it to GitHub and tag the commit.
 
 \section{Exploration Tasks}
 \subsection{Vim Advanced Features}
-Explore and document 3 advanced features of Vim that were not covered in class.
+1. Jump Quickly Between Parentheses
+If you're working with code that has lots of parentheses, brackets, or braces, you can jump between them using the precent sign.
 
+2. Change Text Inside Parentheses or Quotes
+With the ci command, you can quickly delete and replace text inside parentheses, quotes, or similar structures
+
+3. Vim's Hidden Game!
+Vim has a hidden game called Vim Adventure to help you practice commands. Type :help! to access it and explore while learning Vim.
 \subsection{Memory profiling}
 This semester, you got to know about dynamic memory allocation in C in your Programming Fundamentals class.
 
 \subsubsection{Memory Leak}
-In short, explain what memory leaks are and how they might happen in your program.
-
+A memory leak happens when a program allocates memory but doesn't free it, causing unused memory to remain reserved. It can occur if you forget to call free(), lose the reference to allocated memory, or don't handle errors properly. This leads to wasted memory and can slow down or crash the program.
 \subsubsection{Memory profilers}
-Read about a tool called \textit{Valgrind} and write about their purpose and how it helps when memory leaks happen.
+Valgrind is a tool used for detecting memory leaks, invalid memory accesses, and other memory-related issues in programs. It tracks memory allocations and deallocations, reporting any memory that was allocated but not freed. This helps developers identify and fix memory leaks, improving program reliability and performance.
 
 \subsection{GNU/Linux Bash Scripting}
 In this section, you will get to know some handy bash utilities.
@@ -66,8 +71,8 @@ In this section, you will get to know some handy bash utilities.
 Read about a handy CLI tool called \textit{fzf} and answer the following questions:
 
 \begin{itemize}
-    \item What is fuzzy searching? Give a short description.
-    \item Install fzf on your machine and give a description of what the following command does:\\
+    \item Fuzzy searching finds matches even with small differences or typos in the search term. It helps locate items by showing similar results, even if the search query is incomplete or misspelled.
+    \item The command ls | fzf lists the files and directories in the current directory (ls), then passes that list through a pipe (|) to fzf, which performs fuzzy searching.
         \texttt{ls | fzf}
 \end{itemize}
 
