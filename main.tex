@@ -89,12 +89,12 @@ At this point, the list of PDF files is passed to fzf, allowing you to navigate 
 \subsubsection{Opening the file using Zathura}
 To open the selected PDF using Zathura, we can use the output of the commands mentioned earlier and pass it to Zathura. Here’s how to do it:
 Command:
-zathura $(fd -e pdf | fzf)
+zathura dollar sign(fd -e pdf | fzf)
 Explanation:
 fd -e pdf: Lists all files with the .pdf extension.
 | fzf: Passes the list of PDF files to fzf, allowing the user to select one file interactively.
-$(command): Executes the command inside the parentheses and substitutes its output. Here, it takes the selected file path from fzf and passes it to zathura.
-zathura $(...): Opens the selected PDF file in Zathura.
+dollar sign(command): Executes the command inside the parentheses and substitutes its output. Here, it takes the selected file path from fzf and passes it to zathura.
+zathura dollar sign(...): Opens the selected PDF file in Zathura.
 Usage:
 When you run this command, a list of PDF files appears. Use the arrow keys to select the desired file and press Enter. The selected file will open in Zathura.
 
