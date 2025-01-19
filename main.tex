@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Computer Workshop Course}
+\lhead{Final Assignment}
+\rfoot{Page \thepage}
+
+\title{
+    \vspace{2in}
+    \textbf{Final CW projrct :}\\
+    \textbf{Integration of Tools and Practices}\\
+    \large Iran University of Science and Technology\\
+    \vspace{2in}
+}
+
+\author{
+    \vspace{0.5in}
+    Koosha Majlessi\\
+    Computer Workshop\\
+    \vspace{0.5in}
+}
+
+\begin{document}
+
+\begin{titlepage}
+    \maketitle
+    \thispagestyle{empty}
+\end{titlepage}
+
+\newpage
+
+\section{Git and GitHub}
+\subsection{Repository Initialization and Commits}
+First, we go to the GitHub website, click on the "New" option to create a new repository, and then use the terminal to clone it with the git clone command.
+\subsection{GitHub Actions for LaTeX Compilation}
+Provide a walkthrough of setting up GitHub Actions to automatically compile your LaTeX document and any challenges you encountered.
+
+
+\section{Exploration Tasks}
+\subsection{Vim Advanced Features}
+Explore and document 3 advanced features of Vim that were not covered in class.
+
+\subsection{Memory profiling}
+This semester, you got to know about dynamic memory allocation in C in your Programming Fundamentals class.
+
+\subsubsection{Memory Leak}
+In short, explain what memory leaks are and how they might happen in your program.
+
+\subsubsection{Memory profilers}
+Read about a tool called \textit{Valgrind} and write about their purpose and how it helps when memory leaks happen.
+
+\subsection{GNU/Linux Bash Scripting}
+In this section, you will get to know some handy bash utilities.
+
+\subsubsection{fzf}
+Read about a handy CLI tool called \textit{fzf} and answer the following questions:
+
+\begin{itemize}
+    \item What is fuzzy searching? Give a short description.
+    \item Install fzf on your machine and give a description of what the following command does:\\
+        \texttt{ls | fzf}
+\end{itemize}
+
+\subsubsection{Using fzf to find your favorite PDF}
+You might have came across moments when you want to open up a certain PDF when studying for your final exams but finding the directory of that
+PDF is a very gruesome and tiring process. In this section, we will be using \textit{fzf} to find our PDF in seconds! We will be going step by step
+on how to find your file and use fzf to select it.
+
+\begin{enumerate}
+    \item We first need to list the directory of all the files with the extension \texttt{.PDF}. Write a command to list the directory of all the files with the extension \texttt{.PDF} \\
+        \textbf{HINT:} use the command \texttt{fd} for this purpose.
+    \item Now we have to select the PDF we want using \textit{fzf}. Write a command to use \textit{fzf} to select a PDF from the data we gathered above.
+\end{enumerate}
+
+\subsubsection{Opening the file using Zathura}
+Now that have selected which PDF we want to open, we can use a very minimalistic program called \textit{Zathura} to open it. Write a command that uses the
+commands above to open the file using Zathura.
+\paragraph{HINT:} This is how Zathura opens files: \texttt{zathura /path/to/file}
+\paragraph{HINT:} Learn what the syntax \texttt{zathura \$(\textit{command})} does and use to open the PDF we have selected.
+
+\section{Git and FOSS}
+\subsection{README.md}
+Make sure to include a basic README.md file in your GitHub repository that describes the aim of this repository and its purpose.
+
+Make sure to use headings and lists in your README.md file.
+
+\subsection{Issues}
+Create a sample issue in the repository below and attach its screenshot in your LaTeX document:
+
+\url{https://github.com/MiliAxe/CW-Final}
+
+\subsection{FOSS contribution}
+Do you see yourself contributing to FOSS projects in the future? If yes, what kind of projects are you interested in contributing to? If no, why not?
+
+
+\pagebreak
+
+\section*{Submission Guidelines}
+Your final submission should include:
+\begin{itemize}
+    \item A link to your GitHub repository.
+    \item The compiled PDF of your LaTeX document.
+    \item All source files used in the creation of the document and scripts.
+\end{itemize}
+
+\section*{Evaluation Criteria}
+You will be evaluated on the following:
+\begin{itemize}
+    \item The completeness and quality of your LaTeX document.
+    \item The use of Git and GitHub, including commit history and usage of GitHub Actions.
+    \item The depth of exploration and learning in each of the tasks.
+
+\item Your ability to follow the submission guidelines accurately.
+\end{itemize}
+
+Good luck!
+
+\end{document}
